@@ -1,0 +1,17 @@
+{
+  "files": [
+    {
+      "raw": "INGRESOS.csv",
+      "target": "facts_finance.csv",
+      "schema": "facts",
+      "columns": {
+        "Empresa":   "Empresa",
+        "Cuenta":    "Cuenta",
+        "Periodo":   "Periodo",
+        "Monto":     "Monto",
+        "Centro":    { "const": "10000" },
+        "Escenario": { "const": "Base" }
+      }
+    }
+  ]
+}

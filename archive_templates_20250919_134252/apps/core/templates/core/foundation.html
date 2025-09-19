@@ -1,0 +1,115 @@
+﻿{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Base sustentada · FinPlatform{% endblock %}
+
+{% block extra_head %}{% endblock %}
+
+{% block content %}
+<div class="section">
+  <div class="d-flex align-items-center justify-content-between mb-3">
+    <div>
+      <h1 class="h4 mb-1">Marcos y secciones</h1>
+      <p class="lead mb-0">Biblioteca viva para NIF/NIIF, NIAS/ISA, COSO-ERM e ISO-31000.</p>
+    </div>
+  </div>
+
+  <div class="row g-4">
+    <div class="col-lg-7">
+      <div class="card token">
+        <div class="card-body">
+          <div class="d-flex align-items-center gap-2 mb-3">
+            <i class="fa-solid fa-magnifying-glass text-muted"></i>
+            <input type="search" class="form-control form-control-sm"
+                   placeholder="Buscar (código, nombre de marco, sección)…"
+                   oninput="filterSections(this.value)">
+          </div>
+
+          <div id="frameworks-list">
+            {% for fw in frameworks %}
+              <div class="mb-3 framework-item">
+                <div class="d-flex align-items-center mb-1">
+                  <span class="badge badge-brand me-2 text-uppercase">{{ fw.code }}</span>
+                  <h2 class="h6 mb-0">{{ fw.name }}</h2>
+                </div>
+
+                <ul class="mb-2">
+                  {% for s in fw.sections.all %}
+                    <li class="section-item" data-text="{{ fw.code }} {{ fw.name }} {{ s.code }} {{ s.name }}">
+                      <span class="fw-semibold">{{ s.code }}</span>
+                      — {{ s.name }}
+                      {% with s.kpiframeworklink_set.all|length as kcount %}
+                        <span class="badge rounded-pill bg-subtle text-dark ms-2">{{ kcount }} KPI(s)</span>
+                      {% endwith %}
+                      {% if s.source_url %}
+                        <a href="{{ s.source_url }}" class="ms-2 small" target="_blank" rel="noopener">fuente</a>
+                      {% endif %}
+                    </li>
+                  {% empty %}
+                    <li class="text-muted small">Sin secciones registradas.</li>
+                  {% endfor %}
+                </ul>
+                <hr class="mt-0 mb-2"/>
+              </div>
+            {% empty %}
+              <div class="text-muted">No hay marcos registrados.</div>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-lg-5">
+      <div class="card token mb-3">
+        <div class="card-body">
+          <div class="kpi-title">Resumen</div>
+          <div class="row g-3 mt-1">
+            <div class="col-6">
+              <div class="p-3 rounded-token bg-subtle shadow-token-sm">
+                <div class="kpi-title">Marcos</div>
+                <div class="kpi-value">{{ frameworks_total }}</div>
+              </div>
+            </div>
+            <div class="col-6">
+              <div class="p-3 rounded-token bg-subtle shadow-token-sm">
+                <div class="kpi-title">Secciones</div>
+                <div class="kpi-value">{{ sections_total }}</div>
+              </div>
+            </div>
+          </div>
+          <p class="small text-muted mt-3 mb-0">
+            Los contadores reflejan el resultado actual (incluye filtro de búsqueda si aplica).
+          </p>
+        </div>
+      </div>
+
+      <div class="card token">
+        <div class="card-body">
+          <div class="kpi-title mb-2">Tips</div>
+          <ul class="small mb-0">
+            <li>El badge junto a cada sección muestra cuántos KPIs están vinculados.</li>
+            <li>Haz clic en <em>fuente</em> para abrir la referencia original si existe.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  function filterSections(q){
+    q = (q || "").toLowerCase().trim();
+    const container = document.getElementById('frameworks-list');
+    for (const fw of container.querySelectorAll('.framework-item')){
+      let visible = false;
+      for (const li of fw.querySelectorAll('.section-item')){
+        const txt = li.getAttribute('data-text').toLowerCase();
+        const match = !q || txt.includes(q);
+        li.style.display = match ? "" : "none";
+        visible = visible || match;
+      }
+      fw.style.display = visible ? "" : "none";
+    }
+  }
+</script>
+{% endblock %}

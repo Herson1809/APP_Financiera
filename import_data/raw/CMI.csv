@@ -1,0 +1,17 @@
+﻿Unnamed: 0,Unnamed: 1,Unnamed: 2,Unnamed: 3,Unnamed: 4,Unnamed: 5,Unnamed: 6,Unnamed: 7,Unnamed: 8,Unnamed: 9
+,Confort.com,,,,,,,,
+,CUADRO DE MANDO INTEGRAL,,,,,,,,
+,,,,,,,,,
+,OBJETIVO ESTRATEGICO,INDICADORES,FRECUENCIA DE MEDICION,METAS,,Expresión,,REAL,% DE CUMPLIMIENTO
+,"""Generar beneficio a los accionistas, Ser Rentable""",Volumen de ventas en USD,Anual,>=,900000.0,USD anuales,,918000,1.02
+,,% de Margen Neto,Anual,>=,0.2,% s/las ventas,,0.1989730311,0.9948651556
+,,Nuevo financiamiento,Anual,>=,250000.0,USD anuales,,250000,1
+,"""Ser reconocidos a escala nacional por la satisfacción de nuestros clientes""",Nivel de Satisfacción de Clientes,Mensual,>=,4.5,Puntos,,4.6,1.022222222
+,,Número de clientes nuevos,Mensual,>=,300.0,Clientes,,265,0.8833333333
+,,Número de visitas en sitio web,Mensual,>=,2000.0,Visitas,,1300,0.65
+,"“Cumplir con la producción de calzados de calidad""",Unidades producidas,Mensual,<=,4200.0,Pares,,15,0.003571428571
+,,Cumplimiento de tiempo de empaquetado,Mensual,<=,15.0,Minutos,,45,3
+,"""Impulsar la productividad y bienestar”",Plan de Mantenimiento de anual,Mensual,=,1.0,% de ejecución,,0.9,0.9
+,,Efectividad de capacitación al personal en el momento de su ingreso,Mensual,=,1.0,% de ejecución,,1,1
+,,,,,,,,,
+,,,,,,Cumplimiento Plan Estrategico,,,1.047399214

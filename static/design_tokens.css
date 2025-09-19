@@ -1,0 +1,58 @@
+/* ===== Design Tokens (FinPlatform) ===== */
+:root{
+  /* Marca */
+  --brand-1:#1E40AF;   /* azul */
+  --brand-2:#059669;   /* verde */
+  --brand-3:#EA580C;   /* naranja */
+
+  /* Gris / texto */
+  --gray-50:#f8fafc;
+  --gray-100:#f1f5f9;
+  --gray-200:#e5e7eb;
+  --gray-600:#475569;
+  --gray-700:#334155;
+
+  /* Tipografía */
+  --font-sans: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto,
+               "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans",
+               "Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+
+  /* Radios y sombras */
+  --radius-sm:.375rem; --radius-md:.5rem; --radius-lg:.75rem; --radius-xl:1rem;
+  --shadow-sm:0 1px 2px rgba(0,0,0,.06);
+  --shadow-md:0 6px 20px rgba(2,6,23,.08);
+  --shadow-lg:0 12px 24px rgba(2,6,23,.12);
+
+  /* Colores de texto */
+  --heading-color:#0f172a;
+  --text-color:#334155;
+  --muted-color:#64748b;
+}
+
+/* ===== Base ===== */
+html,body{ font-family:var(--font-sans); color:var(--text-color); background:#f6f8fb; }
+h1,h2,h3,h4,h5,h6{ color:var(--heading-color); letter-spacing:.2px; }
+.lead{ color:var(--muted-color); }
+
+/* ===== Componentes ===== */
+.card.token{ border:0; border-radius:var(--radius-lg); box-shadow:var(--shadow-md); background:#fff; }
+.kpi-title{ font-size:.85rem; color:var(--muted-color); }
+.kpi-value{ font-weight:700; font-size:1.5rem; }
+
+.btn-brand{ background:var(--brand-1); border-color:var(--brand-1); color:#fff; }
+.btn-brand:hover{ filter:brightness(.95); }
+
+.badge-soft{ background:var(--gray-100); color:var(--gray-700); }
+.badge-brand{ background:color-mix(in oklab, var(--brand-1) 15%, white); color:var(--brand-1); }
+
+.navbar-brand{ color:var(--brand-1)!important; }
+a{ color:var(--brand-1); }
+a:hover{ color:#15338c; }
+
+/* ===== Utilidades ===== */
+.shadow-token-sm{ box-shadow:var(--shadow-sm)!important; }
+.shadow-token-md{ box-shadow:var(--shadow-md)!important; }
+.shadow-token-lg{ box-shadow:var(--shadow-lg)!important; }
+.rounded-token{ border-radius:var(--radius-lg)!important; }
+.bg-subtle{ background:var(--gray-50)!important; }
+.section{ margin-block:1.25rem; }

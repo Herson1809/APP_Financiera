@@ -1,0 +1,42 @@
+{
+  "sources": {
+    "INGRESOS.csv": {
+      "account_type": "REVENUE",
+      "scenario_kind": "ACTUAL",
+      "scenario_value": "Actual",
+      "columns": {
+        "company": "Empresa",
+        "period": "Periodo",
+        "account": "Cuenta",
+        "center": "Centro",
+        "amount": "Monto",
+        "scenario": "Escenario"
+      },
+      "rename": {}
+    },
+    "IND_BALANCE.csv": {
+      "account_type": "OTHER",
+      "scenario_kind": "ACTUAL",
+      "scenario_value": "Actual",
+      "columns": {
+        "company": "Empresa",
+        "period": "Periodo",
+        "account": "Cuenta",
+        "center": "Centro",
+        "amount": "Saldo"
+      },
+      "rename": {}
+    },
+    "IND_RENTABILIDAD.csv": {
+      "account_type": "OTHER",
+      "scenario_kind": "ACTUAL",
+      "columns": {
+        "company": "Empresa",
+        "period": "Periodo",
+        "account": "Indicador",
+        "amount": "Valor"
+      },
+      "rename": {}
+    }
+  }
+}

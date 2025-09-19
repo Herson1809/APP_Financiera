@@ -1,0 +1,572 @@
+{
+  "source_file": "Modelo Planificación y PresupuestoH.xlsx",
+  "generated_at": "2025-09-12T15:08:43.255910Z",
+  "sheets": [
+    "Indice",
+    "DESCRIPCION",
+    "OBJETIVOS",
+    "ORGANIZACION",
+    "PREMISAS",
+    "CIFRAS HISTORICAS",
+    "INGRESOS",
+    "COSTOS",
+    "GASTOS",
+    "FINANCIEROS",
+    "TABLAS AMORTIZACION",
+    "IMPUESTOS",
+    "IND RENTABILIDAD",
+    "BALANCE GENERAL",
+    "IND BALANCE",
+    "FDC",
+    "ANALISIS RESUMEN",
+    "CMI"
+  ],
+  "suggestions": {
+    "Indice": {
+      "columns": [
+        "Unnamed: 0",
+        "Unnamed: 1",
+        "Unnamed: 2"
+      ],
+      "hints": {
+        "period_like": [],
+        "account_like": [],
+        "amount_like": [],
+        "center_like": [],
+        "company_like": [],
+        "scenario_like": []
+      }
+    },
+    "DESCRIPCION": {
+      "columns": [
+        "Unnamed: 0",
+        "Unnamed: 1",
+        "Unnamed: 2"
+      ],
+      "hints": {
+        "period_like": [],
+        "account_like": [],
+        "amount_like": [],
+        "center_like": [],
+        "company_like": [],
+        "scenario_like": []
+      }
+    },
+    "OBJETIVOS": {
+      "columns": [
+        "Unnamed: 0",
+        "Unnamed: 1",
+        "Unnamed: 2",
+        "Unnamed: 3"
+      ],
+      "hints": {
+        "period_like": [],
+        "account_like": [],
+        "amount_like": [],
+        "center_like": [],
+        "company_like": [],
+        "scenario_like": []
+      }
+    },
+    "ORGANIZACION": {
+      "columns": [
+        "Unnamed: 0",
+        "Unnamed: 1",
+        "Unnamed: 2",
+        "Unnamed: 3",
+        "Unnamed: 4",
+        "Unnamed: 5",
+        "Unnamed: 6",
+        "Unnamed: 7",
+        "Unnamed: 8"
+      ],
+      "hints": {
+        "period_like": [],
+        "account_like": [],
+        "amount_like": [],
+        "center_like": [],
+        "company_like": [],
+        "scenario_like": []
+      }
+    },
+    "PREMISAS": {
+      "columns": [
+        "Unnamed: 0",
+        "Unnamed: 1",
+        "Unnamed: 2",
+        "Unnamed: 3",
+        "Unnamed: 4",
+        "Unnamed: 5",
+        "Unnamed: 6"
+      ],
+      "hints": {
+        "period_like": [],
+        "account_like": [],
+        "amount_like": [],
+        "center_like": [],
+        "company_like": [],
+        "scenario_like": []
+      }
+    },
+    "CIFRAS HISTORICAS": {
+      "columns": [
+        "Unnamed: 0",
+        "Unnamed: 1",
+        "Unnamed: 2",
+        "Unnamed: 3",
+        "Unnamed: 4",
+        "Unnamed: 5",
+        "Unnamed: 6",
+        "Unnamed: 7",
+        "Unnamed: 8",
+        "Unnamed: 9",
+        "Unnamed: 10",
+        "Unnamed: 11",
+        "Unnamed: 12",
+        "Unnamed: 13",
+        "Unnamed: 14",
+        "Unnamed: 15",
+        "Unnamed: 16",
+        "Unnamed: 17",
+        "Unnamed: 18"
+      ],
+      "hints": {
+        "period_like": [],
+        "account_like": [],
+        "amount_like": [],
+        "center_like": [],
+        "company_like": [],
+        "scenario_like": []
+      }
+    },
+    "INGRESOS": {
+      "columns": [
+        "Unnamed: 0",
+        "Unnamed: 1",
+        "Unnamed: 2",
+        "Unnamed: 3",
+        "Unnamed: 4",
+        "Unnamed: 5",
+        "Unnamed: 6"
+      ],
+      "hints": {
+        "period_like": [],
+        "account_like": [],
+        "amount_like": [],
+        "center_like": [],
+        "company_like": [],
+        "scenario_like": []
+      }
+    },
+    "COSTOS": {
+      "columns": [
+        "Unnamed: 0",
+        "Unnamed: 1",
+        "Unnamed: 2",
+        "Unnamed: 3",
+        "Unnamed: 4",
+        "Unnamed: 5",
+        "Unnamed: 6",
+        "Unnamed: 7",
+        "Unnamed: 8",
+        "Unnamed: 9",
+        "Unnamed: 10",
+        "Unnamed: 11",
+        "Unnamed: 12",
+        "Unnamed: 13",
+        "Unnamed: 14",
+        "Unnamed: 15",
+        "Unnamed: 16",
+        "Unnamed: 17",
+        "Unnamed: 18",
+        "Unnamed: 19",
+        "Unnamed: 20",
+        "Unnamed: 21",
+        "Unnamed: 22",
+        "Unnamed: 23",
+        "Unnamed: 24",
+        "Unnamed: 25"
+      ],
+      "hints": {
+        "period_like": [],
+        "account_like": [],
+        "amount_like": [],
+        "center_like": [],
+        "company_like": [],
+        "scenario_like": []
+      }
+    },
+    "GASTOS": {
+      "columns": [
+        "Unnamed: 0",
+        "Unnamed: 1",
+        "Unnamed: 2",
+        "Unnamed: 3",
+        "Unnamed: 4",
+        "Unnamed: 5",
+        "Unnamed: 6",
+        "Unnamed: 7",
+        "Unnamed: 8",
+        "Unnamed: 9",
+        "Unnamed: 10",
+        "Unnamed: 11",
+        "Unnamed: 12",
+        "Unnamed: 13",
+        "Unnamed: 14",
+        "Unnamed: 15",
+        "Unnamed: 16",
+        "Unnamed: 17",
+        "Unnamed: 18",
+        "Unnamed: 19",
+        "Unnamed: 20",
+        "Unnamed: 21",
+        "Unnamed: 22",
+        "Unnamed: 23",
+        "Unnamed: 24",
+        "Unnamed: 25"
+      ],
+      "hints": {
+        "period_like": [],
+        "account_like": [],
+        "amount_like": [],
+        "center_like": [],
+        "company_like": [],
+        "scenario_like": []
+      }
+    },
+    "FINANCIEROS": {
+      "columns": [
+        "Unnamed: 0",
+        "Unnamed: 1",
+        "Unnamed: 2",
+        "Unnamed: 3",
+        "Unnamed: 4",
+        "Unnamed: 5",
+        "Unnamed: 6",
+        "Unnamed: 7",
+        "Unnamed: 8",
+        "Unnamed: 9",
+        "Unnamed: 10",
+        "Unnamed: 11",
+        "Unnamed: 12",
+        "Unnamed: 13",
+        "Unnamed: 14",
+        "Unnamed: 15",
+        "Unnamed: 16",
+        "Unnamed: 17",
+        "Unnamed: 18",
+        "Unnamed: 19",
+        "Unnamed: 20",
+        "Unnamed: 21",
+        "Unnamed: 22",
+        "Unnamed: 23",
+        "Unnamed: 24",
+        "Unnamed: 25"
+      ],
+      "hints": {
+        "period_like": [],
+        "account_like": [],
+        "amount_like": [],
+        "center_like": [],
+        "company_like": [],
+        "scenario_like": []
+      }
+    },
+    "TABLAS AMORTIZACION": {
+      "columns": [
+        "Unnamed: 0",
+        "Unnamed: 1",
+        "Unnamed: 2",
+        "Unnamed: 3",
+        "Unnamed: 4",
+        "Unnamed: 5",
+        "Unnamed: 6",
+        "Unnamed: 7",
+        "Unnamed: 8",
+        "Unnamed: 9",
+        "Unnamed: 10",
+        "Unnamed: 11",
+        "Unnamed: 12",
+        "Unnamed: 13",
+        "Unnamed: 14",
+        "Unnamed: 15"
+      ],
+      "hints": {
+        "period_like": [],
+        "account_like": [],
+        "amount_like": [],
+        "center_like": [],
+        "company_like": [],
+        "scenario_like": []
+      }
+    },
+    "IMPUESTOS": {
+      "columns": [
+        "Unnamed: 0",
+        "Unnamed: 1",
+        "Unnamed: 2",
+        "Unnamed: 3",
+        "Unnamed: 4",
+        "Unnamed: 5",
+        "Unnamed: 6",
+        "Unnamed: 7",
+        "Unnamed: 8",
+        "Unnamed: 9",
+        "Unnamed: 10",
+        "Unnamed: 11",
+        "Unnamed: 12",
+        "Unnamed: 13",
+        "Unnamed: 14",
+        "Unnamed: 15",
+        "Unnamed: 16",
+        "Unnamed: 17",
+        "Unnamed: 18",
+        "Unnamed: 19",
+        "Unnamed: 20",
+        "Unnamed: 21",
+        "Unnamed: 22",
+        "Unnamed: 23",
+        "Unnamed: 24",
+        "Unnamed: 25"
+      ],
+      "hints": {
+        "period_like": [],
+        "account_like": [],
+        "amount_like": [],
+        "center_like": [],
+        "company_like": [],
+        "scenario_like": []
+      }
+    },
+    "IND RENTABILIDAD": {
+      "columns": [
+        "Unnamed: 0",
+        "Unnamed: 1",
+        "Unnamed: 2",
+        "Unnamed: 3",
+        "Unnamed: 4",
+        "Unnamed: 5",
+        "Unnamed: 6",
+        "Unnamed: 7",
+        "Unnamed: 8",
+        "Unnamed: 9",
+        "Unnamed: 10",
+        "Unnamed: 11",
+        "Unnamed: 12",
+        "Unnamed: 13",
+        "Unnamed: 14",
+        "Unnamed: 15",
+        "Unnamed: 16",
+        "Unnamed: 17",
+        "Unnamed: 18",
+        "Unnamed: 19",
+        "Unnamed: 20",
+        "Unnamed: 21",
+        "Unnamed: 22",
+        "Unnamed: 23",
+        "Unnamed: 24",
+        "Unnamed: 25"
+      ],
+      "hints": {
+        "period_like": [],
+        "account_like": [],
+        "amount_like": [],
+        "center_like": [],
+        "company_like": [],
+        "scenario_like": []
+      }
+    },
+    "BALANCE GENERAL": {
+      "columns": [
+        "Unnamed: 0",
+        "Unnamed: 1",
+        "Unnamed: 2",
+        "Unnamed: 3",
+        "Unnamed: 4",
+        "Unnamed: 5",
+        "Unnamed: 6",
+        "Unnamed: 7",
+        "Unnamed: 8",
+        "Unnamed: 9",
+        "Unnamed: 10",
+        "Unnamed: 11",
+        "Unnamed: 12",
+        "Unnamed: 13",
+        "Unnamed: 14",
+        "Unnamed: 15",
+        "Unnamed: 16",
+        "Unnamed: 17",
+        "Unnamed: 18",
+        "Unnamed: 19",
+        "Unnamed: 20",
+        "Unnamed: 21",
+        "Unnamed: 22",
+        "Unnamed: 23",
+        "Unnamed: 24",
+        "Unnamed: 25"
+      ],
+      "hints": {
+        "period_like": [],
+        "account_like": [],
+        "amount_like": [],
+        "center_like": [],
+        "company_like": [],
+        "scenario_like": []
+      }
+    },
+    "IND BALANCE": {
+      "columns": [
+        "Unnamed: 0",
+        "Unnamed: 1",
+        "Unnamed: 2",
+        "Unnamed: 3",
+        "Unnamed: 4",
+        "Unnamed: 5",
+        "Unnamed: 6",
+        "Unnamed: 7",
+        "Unnamed: 8",
+        "Unnamed: 9",
+        "Unnamed: 10",
+        "Unnamed: 11",
+        "Unnamed: 12",
+        "Unnamed: 13",
+        "Unnamed: 14",
+        "Unnamed: 15",
+        "Unnamed: 16",
+        "Unnamed: 17",
+        "Unnamed: 18",
+        "Unnamed: 19",
+        "Unnamed: 20",
+        "Unnamed: 21",
+        "Unnamed: 22",
+        "Unnamed: 23",
+        "Unnamed: 24",
+        "Unnamed: 25",
+        "Unnamed: 26",
+        "Unnamed: 27",
+        "Unnamed: 28",
+        "Unnamed: 29",
+        "Unnamed: 30",
+        "Unnamed: 31",
+        "Unnamed: 32",
+        "Unnamed: 33",
+        "Unnamed: 34",
+        "Unnamed: 35",
+        "Unnamed: 36",
+        "Unnamed: 37"
+      ],
+      "hints": {
+        "period_like": [],
+        "account_like": [],
+        "amount_like": [],
+        "center_like": [],
+        "company_like": [],
+        "scenario_like": []
+      }
+    },
+    "FDC": {
+      "columns": [
+        "Unnamed: 0",
+        "Unnamed: 1",
+        "Unnamed: 2",
+        "Unnamed: 3",
+        "Unnamed: 4",
+        "Unnamed: 5",
+        "Unnamed: 6",
+        "Unnamed: 7",
+        "Unnamed: 8"
+      ],
+      "hints": {
+        "period_like": [],
+        "account_like": [],
+        "amount_like": [],
+        "center_like": [],
+        "company_like": [],
+        "scenario_like": []
+      }
+    },
+    "ANALISIS RESUMEN": {
+      "columns": [
+        "Unnamed: 0",
+        "Unnamed: 1",
+        "Unnamed: 2",
+        "Unnamed: 3",
+        "Unnamed: 4",
+        "Unnamed: 5",
+        "Unnamed: 6",
+        "Unnamed: 7",
+        "Unnamed: 8",
+        "Unnamed: 9",
+        "Unnamed: 10",
+        "Unnamed: 11",
+        "Unnamed: 12",
+        "Unnamed: 13",
+        "Unnamed: 14",
+        "Unnamed: 15"
+      ],
+      "hints": {
+        "period_like": [],
+        "account_like": [],
+        "amount_like": [],
+        "center_like": [],
+        "company_like": [],
+        "scenario_like": []
+      }
+    },
+    "CMI": {
+      "columns": [
+        "Unnamed: 0",
+        "Unnamed: 1",
+        "Unnamed: 2",
+        "Unnamed: 3",
+        "Unnamed: 4",
+        "Unnamed: 5",
+        "Unnamed: 6",
+        "Unnamed: 7",
+        "Unnamed: 8",
+        "Unnamed: 9"
+      ],
+      "hints": {
+        "period_like": [],
+        "account_like": [],
+        "amount_like": [],
+        "center_like": [],
+        "company_like": [],
+        "scenario_like": []
+      }
+    }
+  },
+  "templates": [
+    "accounts.csv",
+    "companies.csv",
+    "cost_centers.csv",
+    "drivers.csv",
+    "facts_finance.csv",
+    "kpi_framework_links.csv",
+    "kpi_targets.csv",
+    "kpis.csv",
+    "periods.csv",
+    "projections_input.csv",
+    "scenarios.csv"
+  ],
+  "raw_csvs": [
+    "Indice.csv",
+    "DESCRIPCION.csv",
+    "OBJETIVOS.csv",
+    "ORGANIZACION.csv",
+    "PREMISAS.csv",
+    "CIFRAS_HISTORICAS.csv",
+    "INGRESOS.csv",
+    "COSTOS.csv",
+    "GASTOS.csv",
+    "FINANCIEROS.csv",
+    "TABLAS_AMORTIZACION.csv",
+    "IMPUESTOS.csv",
+    "IND_RENTABILIDAD.csv",
+    "BALANCE_GENERAL.csv",
+    "IND_BALANCE.csv",
+    "FDC.csv",
+    "ANALISIS_RESUMEN.csv",
+    "CMI.csv"
+  ]
+}

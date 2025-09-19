@@ -1,0 +1,7 @@
+code,name,statement,group,subgroup,order_index,natural_sign,measure
+4001,Ventas Netas,IS,Revenue,Ventas,10,1,flow
+5100,Costo de Ventas,IS,COGS,Costo,20,-1,flow
+6000,Gastos Operativos,IS,OPEX,Gastos,30,-1,flow
+1100,Efectivo y Bancos,BS,Activos,Corriente,10,1,balance
+2100,Cuentas por Pagar,BS,Pasivos,Corriente,40,-1,balance
+3100,Capital,BS,Patrimonio,Capital,60,1,balance

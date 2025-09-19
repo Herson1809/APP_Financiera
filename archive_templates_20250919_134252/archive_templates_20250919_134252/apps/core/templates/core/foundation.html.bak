@@ -1,0 +1,142 @@
+﻿<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Base sustentada</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <style>
+    body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Inter,Arial,sans-serif;margin:0;background:#f7f7f8;color:#111}
+    header{background:#111;color:#fff;padding:16px 20px;display:flex;justify-content:space-between;align-items:center}
+    a{color:inherit;text-decoration:none}
+    .container{max-width:1100px;margin:24px auto;padding:0 16px}
+    .grid{display:grid;gap:16px}
+    .grid-2{grid-template-columns:1fr 1fr}
+    .card{background:#fff;border:1px solid #e5e7eb;border-radius:12px;padding:16px}
+    .muted{color:#6b7280;font-size:14px}
+    .pill{display:inline-block;background:#eef2ff;color:#3730a3;padding:2px 8px;border-radius:999px;font-size:12px;margin-right:6px}
+    .kpi{display:inline-block;background:#ecfeff;color:#075985;padding:2px 8px;border-radius:999px;font-size:12px;margin:2px}
+    .search{display:flex;gap:8px;margin:8px 0 16px}
+    input[type="text"]{flex:1;border:1px solid #d1d5db;border-radius:8px;padding:10px 12px}
+    button{border:0;background:#111;color:#fff;border-radius:8px;padding:10px 14px;cursor:pointer}
+    h2{margin:0 0 6px 0}
+    h3{margin:8px 0}
+    ul{margin:8px 0 0 18px}
+    .small{font-size:12px}
+
+    details{margin:6px 0 10px 0;border-left:3px solid #e5e7eb;padding-left:10px}
+    details > summary{cursor:pointer;list-style:none}
+    details > summary::-webkit-details-marker{display:none}
+    .sec-body{margin:8px 0 0 0}
+    .sec-body p{margin:6px 0}
+    .badge{display:inline-block;background:#f1f5f9;color:#0f172a;padding:2px 8px;border-radius:999px;font-size:12px;margin-right:6px}
+  </style>
+</head>
+<body>
+  <header>
+    <div><a href="/">FinPlatform</a> <span class="muted">/ Base sustentada</span></div>
+    <nav><a class="muted" href="/admin/">Admin</a></nav>
+  </header>
+
+  <div class="container grid grid-2">
+    <div class="card">
+      <h2>Marcos y secciones</h2>
+      <div class="muted small">Marcos: {{ total_fw }} • Secciones: {{ total_sections }}</div>
+
+      <form method="get" class="search">
+        <input type="text" name="q" value="{{ q }}" placeholder="Buscar (código, nombre de marco, sección)...">
+        <button type="submit">Buscar</button>
+      </form>
+
+      {% for fw in frameworks %}
+        <div style="margin:12px 0 16px 0">
+          <h3>
+            <span class="pill">{{ fw.code }}</span> {{ fw.name }}
+            {% if fw.url %}<a class="muted small" href="{{ fw.url }}" target="_blank">[fuente]</a>{% endif %}
+          </h3>
+          {% if fw.description %}<div class="muted small">{{ fw.description }}</div>{% endif %}
+
+          {% if fw.sections.all %}
+            <ul>
+              {% for s in fw.sections.all %}
+                <li>
+                  <details>
+                    <summary>
+                      <strong>{{ s.code }}</strong> — {{ s.title }}
+                      {% with s.kpi_links.all as lk %}
+                        {% if lk %}
+                          <span class="badge">{{ lk|length }} KPI(s)</span>
+                        {% endif %}
+                      {% endwith %}
+                    </summary>
+                    <div class="sec-body">
+                      {% if s.text %}
+                        {{ s.text|linebreaks }}
+                      {% else %}
+                        <div class="muted small">Sin contenido aún. Puedes editarlo en Admin → Secciones del marco.</div>
+                      {% endif %}
+
+                      {% with s.kpi_links.all as lk %}
+                        {% if lk %}
+                          <div style="margin-top:8px">
+                            <div class="muted small">KPIs relacionados:</div>
+                            {% for l in lk %}
+                              <span class="kpi">{{ l.kpi.name }}</span>
+                            {% endfor %}
+                          </div>
+                        {% endif %}
+                      {% endwith %}
+                    </div>
+                  </details>
+                </li>
+              {% endfor %}
+            </ul>
+          {% else %}
+            <div class="muted small">Sin secciones.</div>
+          {% endif %}
+        </div>
+      {% empty %}
+        <div class="muted">No se encontraron marcos con ese filtro.</div>
+      {% endfor %}
+    </div>
+
+    <div class="card">
+      <h2>Vinculaciones KPI → Marco</h2>
+      <div class="muted small">Se muestran hasta 50 KPIs (demo). Las vinculaciones se generan desde el importador.</div>
+      {% for k, sections in kpis_with_sections %}
+        <div style="margin:10px 0">
+          <div><strong>{{ k.name }}</strong> <span class="muted small">({{ k.period }})</span></div>
+          <div>
+            {% if sections %}
+              {% for sec in sections %}
+                <span class="kpi">{{ sec.framework.code }}:{{ sec.code }}</span>
+              {% endfor %}
+            {% else %}
+              <span class="muted small">Sin referencias asociadas.</span>
+            {% endif %}
+          </div>
+        </div>
+      {% empty %}
+        <div class="muted">No hay KPIs cargados.</div>
+      {% endfor %}
+    </div>
+  </div>
+<style>
+  .left-tab, .left-tab2 {
+    position: fixed; left: 6px; z-index: 9999;
+    writing-mode: vertical-rl; text-orientation: mixed;
+    background: #111; color: #fff; text-decoration: none;
+    padding: 10px 8px; border-radius: 10px; font: 600 12px/1 system-ui, -apple-system, Segoe UI, Roboto, Inter, Arial, sans-serif;
+    box-shadow: 0 6px 16px rgba(0,0,0,.2); opacity:.92;
+    transition: transform .15s ease, opacity .15s ease;
+  }
+  .left-tab:hover, .left-tab2:hover { opacity: 1; transform: translateY(-1px); }
+  .left-tab  { top: 50%; transform: translateY(-50%); }
+  .left-tab2 { top: calc(50% + 80px); transform: translateY(-50%); background:#2563eb; }
+</style>
+<a class="left-tab"  href="/"            title="Inicio">Inicio</a>
+<a class="left-tab2" href="/foundation/" title="Base sustentada">Base sustentada</a>
+{% include 'core/_left_tabs.html' %}
+</body>
+</html>
+
+

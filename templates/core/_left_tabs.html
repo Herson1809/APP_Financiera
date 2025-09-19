@@ -1,0 +1,96 @@
+{# templates/core/_left_tabs.html #}
+<nav class="sb-nav">
+  <!-- Básico -->
+  <ul class="nav flex-column sb-list mb-3">
+    <li class="nav-item">
+      <a class="nav-link sb-link" href="{% url 'home' %}">
+        <i class="fa-solid fa-house"></i><span>Inicio</span>
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link sb-link" href="{% url 'foundation' %}">
+        <i class="fa-solid fa-layer-group"></i><span>Base sustentada</span>
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link sb-link" href="/admin/">
+        <i class="fa-solid fa-gear"></i><span>Admin</span>
+      </a>
+    </li>
+  </ul>
+
+  <!-- Reportes -->
+  <div class="sb-section">REPORTES</div>
+  <ul class="nav flex-column sb-list mb-3">
+    <li class="nav-item">
+      <a class="nav-link sb-link" href="{% url 'income_report' %}">
+        <i class="fa-solid fa-chart-line"></i><span>Estado de Resultados</span>
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link sb-link" href="{% url 'balance_report' %}">
+        <i class="fa-solid fa-scale-balanced"></i><span>Balance General</span>
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link sb-link" href="{% url 'cashflow_report' %}">
+        <i class="fa-solid fa-droplet"></i><span>Flujo de Efectivo</span>
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link sb-link" href="{% url 'monthly_breakdown_view' %}">
+        <i class="fa-solid fa-calendar-days"></i><span>Desglose Mensual</span>
+      </a>
+    </li>
+  </ul>
+
+  <!-- Modelado -->
+  <div class="sb-section">MODELADO</div>
+  <ul class="nav flex-column sb-list mb-3">
+    <li class="nav-item">
+      <a class="nav-link sb-link" href="{% url 'projections_view' %}">
+        <i class="fa-solid fa-calculator"></i><span>Proyecciones &amp; Premisas</span>
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link sb-link" href="{% url 'org_view' %}">
+        <i class="fa-solid fa-people-group"></i><span>Organización &amp; RR.HH.</span>
+      </a>
+    </li>
+  </ul>
+
+  <!-- Análisis -->
+  <div class="sb-section">ANÁLISIS</div>
+  <ul class="nav flex-column sb-list mb-3">
+    <li class="nav-item">
+      <a class="nav-link sb-link" href="{% url 'comparatives_view' %}">
+        <i class="fa-solid fa-arrows-rotate"></i><span>Comparativos</span>
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link sb-link" href="{% url 'ratios_view' %}">
+        <i class="fa-solid fa-gauge-high"></i><span>Ratios &amp; KPIs</span>
+      </a>
+    </li>
+  </ul>
+
+  <!-- Datos & Gobierno -->
+  <div class="sb-section">DATOS &amp; GOBIERNO</div>
+  <ul class="nav flex-column sb-list">
+    <li class="nav-item">
+      <a class="nav-link sb-link" href="{% url 'chart_of_accounts_view' %}">
+        <i class="fa-solid fa-sitemap"></i><span>Mapa de Cuentas</span>
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link sb-link" href="{% url 'data_ingest_view' %}">
+        <i class="fa-solid fa-cloud-arrow-up"></i><span>Cargas &amp; Validación</span>
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link sb-link" href="{% url 'audit_view' %}">
+        <i class="fa-solid fa-clipboard-check"></i><span>Auditoría</span>
+      </a>
+    </li>
+  </ul>
+</nav>

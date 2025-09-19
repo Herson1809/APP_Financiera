@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <title>EERR {{ company.name }} - {{ year }}</title>
+  <style>
+    body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial; margin: 24px; }
+    table { border-collapse: collapse; width: 100%; }
+    th, td { border: 1px solid #ccc; padding: 8px; text-align: left; }
+    th { background: #f6f6f6; }
+    tfoot td { font-weight: 700; }
+  </style>
+</head>
+<body>
+  <h1>EERR – {{ company.name }} – {{ year }}</h1>
+  {% if msg %}<p>{{ msg }}</p>{% endif %}
+  <table>
+    <thead>
+      <tr><th>Cuenta</th><th>Nombre</th><th>Tipo</th><th>Importe</th></tr>
+    </thead>
+    <tbody>
+      {% for r in rows %}
+        <tr>
+          <td>{{ r.account__code }}</td>
+          <td>{{ r.account__name }}</td>
+          <td>{{ r.account__type }}</td>
+          <td style="text-align:right">{{ r.amount|floatformat:2 }}</td>
+        </tr>
+      {% empty %}
+        <tr><td colspan="4">Sin datos</td></tr>
+      {% endfor %}
+    </tbody>
+    <tfoot>
+      <tr><td colspan="3">Total Ingresos</td><td style="text-align:right">{{ total_income|floatformat:2 }}</td></tr>
+      <tr><td colspan="3">Total Gastos</td><td style="text-align:right">{{ total_expense|floatformat:2 }}</td></tr>
+    </tfoot>
+  </table>
+</body>
+</html>

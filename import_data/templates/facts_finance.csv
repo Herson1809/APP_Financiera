@@ -1,0 +1,10 @@
+company_code,scenario,year,month,account_code,account_name,amount,cost_center
+Confort.com,Base,2025,12,VENTAS,Ventas,2258624.25,
+Confort.com,Base,2025,12,COMPRAS_DE_MATERIA_PRIMA,Compras de materia prima,-948622.19,
+Confort.com,Base,2025,12,GASTOS_DE_PERSONAL_OBRERO,Gastos de personal obrero,-162620.95,
+Confort.com,Base,2025,12,GASTOS_DE_PERSONAL_ADMINISTRATIVO,Gastos de personal administrativo,-188535.6,
+Confort.com,Base,2025,12,GASTOS_DE_SERVICIOS_GENERALES,Gastos de Servicios generales,-117834.75,
+Confort.com,Base,2025,12,GASTO_DE_DEPRECIACION_MOBILIARIO_Y_ENSERES,Gasto de depreciacion Mobiliario y enseres,-11293.12,
+Confort.com,Base,2025,12,GASTO_DE_DEPRECIACION_MAQUINARIAS_PLANTA,Gasto de depreciacion Maquinarias planta,-11293.12,
+Confort.com,Base,2025,12,COSTOS_FINANCIEROS,Costos financieros,-4081.1,
+Confort.com,Base,2025,12,IMPUESTOS_SOBRE_BENEFICIOS,Impuestos sobre beneficios,,

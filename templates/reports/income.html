@@ -1,0 +1,98 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Estado de Resultados – {{ year }}{% endblock %}
+
+{% block content %}
+<div class="container-fluid py-3">
+  <div class="d-flex align-items-center mb-3">
+    <h1 class="h4 mb-0">Estado de Resultados ({{ year }})</h1>
+    {% if previous_year %}
+      <span class="ms-2 text-muted">· Comparativo {{ previous_year }}</span>
+    {% endif %}
+  </div>
+
+  <div class="mb-3">
+    <form class="row g-2" method="get" action="">
+      <div class="col-auto">
+        <label for="year" class="visually-hidden">Año</label>
+        <input id="year" name="year" type="number" class="form-control"
+               value="{{ year }}" min="2000" step="1" />
+      </div>
+      <div class="col-auto">
+        <button type="submit" class="btn btn-primary">Actualizar</button>
+      </div>
+    </form>
+  </div>
+
+  <div class="card">
+    <div class="card-body table-responsive">
+      <table class="table table-sm align-middle">
+        <thead>
+          <tr>
+            <th>Cuenta</th>
+            <th class="text-end">{{ year }}</th>
+            {% if previous_year %}<th class="text-end">{{ previous_year }}</th>{% endif %}
+            <th class="text-end">% sobre ventas</th>
+            {% if previous_year %}<th class="text-end">Δ abs</th><th class="text-end">Δ %</th>{% endif %}
+          </tr>
+        </thead>
+        <tbody>
+          {% for row in rows %}
+            <tr class="{% if row.is_subtotal %}table-light{% endif %}">
+              <td>{{ row.name }}</td>
+              <td class="text-end">{{ row.amount|floatformat:2 }}</td>
+              {% if previous_year %}
+                <td class="text-end">
+                  {% if row.prev_amount is not None %}{{ row.prev_amount|floatformat:2 }}{% else %}—{% endif %}
+                </td>
+              {% endif %}
+              <td class="text-end">
+                {% if row.vertical is not None %}{{ row.vertical|floatformat:2 }}%{% else %}—{% endif %}
+              </td>
+              {% if previous_year %}
+                <td class="text-end">
+                  {% if row.delta_abs is not None %}{{ row.delta_abs|floatformat:2 }}{% else %}—{% endif %}
+                </td>
+                <td class="text-end">
+                  {% if row.delta_pct is not None %}{{ row.delta_pct|floatformat:2 }}%{% else %}—{% endif %}
+                </td>
+              {% endif %}
+            </tr>
+          {% empty %}
+            <tr>
+              <td colspan="6" class="text-center text-muted py-4">
+                Sin datos para {{ year }}. Carga o selecciona otro año.
+              </td>
+            </tr>
+          {% endfor %}
+        </tbody>
+        {% if totals %}
+        <tfoot>
+          <tr class="table-secondary fw-semibold">
+            <td>Total</td>
+            <td class="text-end">{{ totals.amount|floatformat:2 }}</td>
+            {% if previous_year %}
+              <td class="text-end">
+                {% if totals.prev_amount is not None %}{{ totals.prev_amount|floatformat:2 }}{% else %}—{% endif %}
+              </td>
+            {% endif %}
+            <td class="text-end">
+              {% if totals.vertical is not None %}{{ totals.vertical|floatformat:2 }}%{% else %}—{% endif %}
+            </td>
+            {% if previous_year %}
+              <td class="text-end">
+                {% if totals.delta_abs is not None %}{{ totals.delta_abs|floatformat:2 }}{% else %}—{% endif %}
+              </td>
+              <td class="text-end">
+                {% if totals.delta_pct is not None %}{{ totals.delta_pct|floatformat:2 }}%{% else %}—{% endif %}
+              </td>
+            {% endif %}
+          </tr>
+        </tfoot>
+        {% endif %}
+      </table>
+    </div>
+  </div>
+</div>
+{% endblock %}

@@ -1,0 +1,129 @@
+{
+  "files": [
+    {
+      "file": "accounts.csv",
+      "rows": 58,
+      "columns": [
+        "account_code",
+        "account_name",
+        "account_type",
+        "parent_code",
+        "level",
+        "is_leaf"
+      ]
+    },
+    {
+      "file": "companies.csv",
+      "rows": 2,
+      "columns": [
+        "company_code",
+        "company_name",
+        "currency",
+        "is_active"
+      ]
+    },
+    {
+      "file": "cost_centers.csv",
+      "rows": 41,
+      "columns": [
+        "center_code",
+        "center_name",
+        "parent_code",
+        "level",
+        "is_active"
+      ]
+    },
+    {
+      "file": "drivers.csv",
+      "rows": 0,
+      "columns": [
+        "driver_code",
+        "driver_name",
+        "category",
+        "unit"
+      ]
+    },
+    {
+      "file": "facts_finance.csv",
+      "rows": 98,
+      "columns": [
+        "company_code",
+        "period_code",
+        "account_code",
+        "scenario_code",
+        "center_code",
+        "amount"
+      ]
+    },
+    {
+      "file": "kpi_framework_links.csv",
+      "rows": 0,
+      "columns": [
+        "kpi_code",
+        "framework_slug",
+        "section_slug",
+        "rationale"
+      ]
+    },
+    {
+      "file": "kpi_targets.csv",
+      "rows": 0,
+      "columns": [
+        "kpi_code",
+        "period_code",
+        "target_value",
+        "lower_bound",
+        "upper_bound"
+      ]
+    },
+    {
+      "file": "kpis.csv",
+      "rows": 0,
+      "columns": [
+        "kpi_code",
+        "kpi_name",
+        "formula",
+        "unit",
+        "sign",
+        "direction"
+      ]
+    },
+    {
+      "file": "periods.csv",
+      "rows": 24,
+      "columns": [
+        "period_code",
+        "year",
+        "month",
+        "start_date",
+        "end_date",
+        "is_open"
+      ]
+    },
+    {
+      "file": "projections_input.csv",
+      "rows": 0,
+      "columns": [
+        "company_code",
+        "year",
+        "driver_code",
+        "driver_name",
+        "assumption",
+        "value",
+        "note"
+      ]
+    },
+    {
+      "file": "scenarios.csv",
+      "rows": 7,
+      "columns": [
+        "scenario_code",
+        "scenario_name",
+        "kind"
+      ]
+    }
+  ],
+  "notes": [
+    "facts_finance.csv agregado por claves [company_code,period_code,account_code,scenario_code,center_code]."
+  ]
+}

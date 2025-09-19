@@ -1,0 +1,25 @@
+﻿{% load static %}
+<style>
+  .left-tab, .left-tab2 {
+    position: fixed; left: 6px; z-index: 9999;
+    writing-mode: vertical-rl; text-orientation: mixed;
+    background: #111; color: #fff; text-decoration: none;
+    padding: 10px 8px; border-radius: 10px;
+    font: 600 12px/1 system-ui, -apple-system, Segoe UI, Roboto, Inter, Arial, sans-serif;
+    box-shadow: 0 6px 16px rgba(0,0,0,.2); opacity:.92;
+    transition: transform .15s ease, opacity .15s ease;
+  }
+  .left-tab:hover, .left-tab2:hover { opacity: 1; transform: translateY(-1px); }
+  .left-tab  { top: 50%; transform: translateY(-50%); }
+  .left-tab2 { top: calc(50% + 80px); transform: translateY(-50%); background:#2563eb; }
+</style>
+
+{# Muestra "Base sustentada" en todas MENOS la propia /foundation/ #}
+{% if request and request.path != '/foundation/' %}
+  <a class="left-tab"  href="/foundation/" title="Base sustentada">Base sustentada</a>
+{% endif %}
+
+{# Muestra "Inicio" en todas MENOS la home / #}
+{% if request and request.path != '/' %}
+  <a class="left-tab2" href="/"            title="Inicio">Inicio</a>
+{% endif %}

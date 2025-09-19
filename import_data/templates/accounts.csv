@@ -1,0 +1,12 @@
+code,name,account_type
+INGRESOS,Ingresos,Revenue
+GASTOS,Gastos,Expense
+VENTAS,Ventas,Revenue
+COMPRAS_DE_MATERIA_PRIMA,Compras de materia prima,COGS
+GASTOS_DE_PERSONAL_OBRERO,Gastos de personal obrero,COGS
+GASTOS_DE_PERSONAL_ADMINISTRATIVO,Gastos de personal administrativo,Expense
+GASTOS_DE_SERVICIOS_GENERALES,Gastos de Servicios generales,Expense
+GASTO_DE_DEPRECIACION_MOBILIARIO_Y_ENSERES,Gasto de depreciacion Mobiliario y enseres,Depreciation
+GASTO_DE_DEPRECIACION_MAQUINARIAS_PLANTA,Gasto de depreciacion Maquinarias planta,Depreciation
+COSTOS_FINANCIEROS,Costos financieros,Interest
+IMPUESTOS_SOBRE_BENEFICIOS,Impuestos sobre beneficios,Tax

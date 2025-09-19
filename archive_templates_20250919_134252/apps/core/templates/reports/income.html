@@ -1,0 +1,41 @@
+{% load humanize %}
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>EERR {{ company.name|default:"" }} - {{ year|default:"" }}</title>
+  <style>
+    body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial; margin:24px; }
+    table { border-collapse: collapse; width: 100%; }
+    th, td { border: 1px solid #ccc; padding: 6px 8px; text-align: left; }
+    th { background: #f6f6f6; }
+    td.num, th.num { text-align: right; }
+  </style>
+</head>
+<body>
+  <h1>EERR {{ company.name|default:"" }} — {{ year|default:"" }}</h1>
+
+  {% if msg %}<p>{{ msg }}</p>{% endif %}
+
+  {% if rows %}
+  <table>
+    <thead>
+      <tr><th>Código</th><th>Cuenta</th><th class="num">Total</th></tr>
+    </thead>
+    <tbody>
+      {% for r in rows %}
+      <tr>
+        <td>{{ r.account__code }}</td>
+        <td>{{ r.account__name }}</td>
+        <td class="num">{{ r.total|floatformat:2|intcomma }}</td>
+      </tr>
+      {% endfor %}
+      <tr>
+        <th colspan="2" class="num">TOTAL</th>
+        <th class="num">{{ total|floatformat:2|intcomma }}</th>
+      </tr>
+    </tbody>
+  </table>
+  {% endif %}
+</body>
+</html>
