@@ -1,6 +1,9 @@
-
-# Envs
+# secretos / locales
 .env
-.Env
 *.env
-env
+db.sqlite3
+*.sqlite3
+
+# binarios/pesados
+fin_exports_bundle.zip
+Modelo Planificación y PresupuestoH.xlsx
