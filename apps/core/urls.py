@@ -1,9 +1,6 @@
-# apps/core/urls.py
-from django.urls import path
+from django.urls import re_path
 from . import views
 
 urlpatterns = [
-    # con slash y sin slash (para evitar confusiones)
-    path("reports/income/", views.income_report, name="income_report"),
-    path("reports/income",  views.income_report),
+    re_path(r"^reports/income/?$", views.income_report, name="income-report"),
 ]
